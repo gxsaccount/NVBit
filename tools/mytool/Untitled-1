@@ -1,0 +1,82 @@
+#0  0x00007f223c00b5c0 in ?? ()
+#1  0x00007f24c68b7584 in std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release (this=0x7f223c01d170)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr_base.h:154
+#2  0x00007f24c68ad4b5 in std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count (this=0x7f208c007208, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr_base.h:684
+#3  0x00007f24c68aa4c2 in std::__shared_ptr<mgsdk::common::Index, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr (this=0x7f208c007200, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr_base.h:1123
+#4  0x00007f24c68aa4de in std::shared_ptr<mgsdk::common::Index>::~shared_ptr (this=0x7f208c007200, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr.h:93
+#5  0x00007f24c68d66b1 in std::_Destroy<std::shared_ptr<mgsdk::common::Index> > (__pointer=0x7f208c007200)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:98
+#6  0x00007f24c68cfcc1 in std::_Destroy_aux<false>::__destroy<std::shared_ptr<mgsdk::common::Index>*> (__first=0x7f208c007200, __last=0x7f208c007210)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:108
+#7  0x00007f24c68c7510 in std::_Destroy<std::shared_ptr<mgsdk::common::Index>*> (__first=0x7f208c007200, __last=0x7f208c007210)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:137
+#8  0x00007f24c68bd701 in std::_Destroy<std::shared_ptr<mgsdk::common::Index>*, std::shared_ptr<mgsdk::common::Index> > (__first=0x7f208c007200, __last=0x7f208c007210)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:206
+#9  0x00007f24c68b34c3 in std::vector<std::shared_ptr<mgsdk::common::Index>, std::allocator<std::shared_ptr<mgsdk::common::Index> > >::~vector (this=0x7f208c008658, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_vector.h:434
+#10 0x00007f24c68f48fa in mgsdk::common::ItemInfo::~ItemInfo (this=0x7f208c008100, __in_chrg=<optimized out>) at megvideo-v2/src/common/include/mgsdk/common/item.h:78
+#11 0x00007f24c68f49c8 in __gnu_cxx::new_allocator<mgsdk::common::ItemInfo>::destroy<mgsdk::common::ItemInfo> (this=0x7f208c008100, __p=0x7f208c008100)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/ext/new_allocator.h:140
+#12 0x00007f24c68f443f in std::allocator_traits<std::allocator<mgsdk::common::ItemInfo> >::destroy<mgsdk::common::ItemInfo> (__a=..., __p=0x7f208c008100)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/alloc_traits.h:487
+#13 0x00007f24c68f358b in std::_Sp_counted_ptr_inplace<mgsdk::common::ItemInfo, std::allocator<mgsdk::common::ItemInfo>, (__gnu_cxx::_Lock_policy)2>::_M_dispose (this=0x7f208c0080f0)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr_base.h:535
+#14 0x00007f24c68b7584 in std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release (this=0x7f208c0080f0)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr_base.h:154
+#15 0x00007f24c68ad4b5 in std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count (this=0x7f208c002790, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr_base.h:684
+#16 0x00007f24c68abd24 in std::__shared_ptr<mgsdk::common::ItemInfo, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr (this=0x7f208c002788, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr_base.h:1123
+#17 0x00007f24c68abd40 in std::shared_ptr<mgsdk::common::ItemInfo>::~shared_ptr (this=0x7f208c002788, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/shared_ptr.h:93
+#18 0x00007f24c68abea4 in mgsdk::common::HandleT<mgsdk::common::ItemInfo>::~HandleT (this=0x7f208c002750, __in_chrg=<optimized out>) at megvideo-v2/src/common/include/mgsdk/common/handle.h:19
+#19 0x00007f24c68d6f26 in std::_Destroy<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > (__pointer=0x7f208c002750)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:98
+#20 0x00007f24c68d0c5e in std::_Destroy_aux<false>::__destroy<mgsdk::common::HandleT<mgsdk::common::ItemInfo>*> (__first=0x7f208c002750, __last=0x7f208c0027c8)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:108
+#21 0x00007f24c68c8406 in std::_Destroy<mgsdk::common::HandleT<mgsdk::common::ItemInfo>*> (__first=0x7f208c002750, __last=0x7f208c0027c8)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:137
+#22 0x00007f24c68be67d in std::_Destroy<mgsdk::common::HandleT<mgsdk::common::ItemInfo>*, mgsdk::common::HandleT<mgsdk::common::ItemInfo> > (__first=0x7f208c002750, __last=0x7f208c0027c8)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_construct.h:206
+#23 0x00007f24c68b4075 in std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > >::~vector (this=0x7f208c002710, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_vector.h:434
+#24 0x00007f24c68dc974 in std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > >::~pair (this=0x7f208c002708, 
+    __in_chrg=<optimized out>) at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/stl_pair.h:208
+#25 0x00007f24c68dc994 in __gnu_cxx::new_allocator<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > > >::destroy<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > > > (this=0x7f226f7f9f27, __p=0x7f208c002708)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/ext/new_allocator.h:140
+#26 0x00007f24c68d6b51 in std::allocator_traits<std::allocator<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > > > >::destroy<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > > > (__a=..., __p=0x7f208c002708)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/alloc_traits.h:487
+---Type <return> to continue, or q <return> to quit---
+#27 0x00007f24c68d0423 in std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > >, false> > >::_M_deallocate_node (this=0x7f226f7fa488, __n=0x7f208c002700)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/hashtable_policy.h:2084
+#28 0x00007f24c68c7d8a in std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > >, false> > >::_M_deallocate_nodes (this=0x7f226f7fa488, __n=0x0)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/hashtable_policy.h:2097
+#29 0x00007f24c68be052 in std::_Hashtable<int, std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > >, std::allocator<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > > >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::clear (this=0x7f226f7fa488)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/hashtable.h:2032
+#30 0x00007f24c68b3c66 in std::_Hashtable<int, std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > >, std::allocator<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > > >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::~_Hashtable (this=0x7f226f7fa488, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/hashtable.h:1358
+#31 0x00007f24c68ab08e in std::unordered_map<int, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<int const, std::vector<mgsdk::common::HandleT<mgsdk::common::ItemInfo>, std::allocator<mgsdk::common::HandleT<mgsdk::common::ItemInfo> > > > > >::~unordered_map (this=0x7f226f7fa488, __in_chrg=<optimized out>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/unordered_map.h:101
+
+#32 0x00007f24c68f4954 in mgsdk::common::ItemInfo::~ItemInfo (this=0x7f226f7fa100, __in_chrg=<optimized out>) at megvideo-v2/src/common/include/mgsdk/common/item.h:78
+#33 0x00007f24c6c8af22 in mgsdk::pipeline::ClearCropActor::execute (this=0x7f225bd301c0) at megvideo-v2/src/pipeline/impl/actors/sit_back_actor.h:137
+#34 0x00007f24c6ce9aa4 in mgsdk::flow::Node<mgsdk::flow::NodeInput<mgsdk::common::HandleT<mgsdk::common::FrameInfo> >, mgsdk::flow::NodeOutput<mgsdk::common::HandleT<mgsdk::common::FrameInfo> > >::exec (this=0x7f225bd301c0)
+    at megvideo-v2/src/flow/include/mgsdk/flow/node.h:207
+#35 0x00007f24c6aa1e65 in mgsdk::flow::NaiveGraph::exec (this=0x7f225bdde680, node=0x7f225bd301c0) at megvideo-v2/src/flow/include/mgsdk/flow/graph.h:117
+#36 0x00007f24c6aa4c74 in std::__invoke_impl<void, void (mgsdk::flow::NaiveGraph::*)(mgsdk::flow::BaseNode*), mgsdk::flow::NaiveGraph*, mgsdk::flow::BaseNode*>(std::__invoke_memfun_deref, void (mgsdk::flow::NaiveGraph::*&&)(mgsdk::flow::BaseNode*), mgsdk::flow::NaiveGraph*&&, mgsdk::flow::BaseNode*&&) (__f=<unknown type in /opt/megvii/lib/libmegvideo.so, CU 0x1856234, DIE 0x18f8863>, 
+    __t=<unknown type in /opt/megvii/lib/libmegvideo.so, CU 0x1856234, DIE 0x18f8871>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/invoke.h:73
+#37 0x00007f24c6aa3386 in std::__invoke<void (mgsdk::flow::NaiveGraph::*)(mgsdk::flow::BaseNode*), mgsdk::flow::NaiveGraph*, mgsdk::flow::BaseNode*>(void (mgsdk::flow::NaiveGraph::*&&)(mgsdk::flow::BaseNode*), mgsdk::flow::NaiveGraph*&&, mgsdk::flow::BaseNode*&&) (__fn=<unknown type in /opt/megvii/lib/libmegvideo.so, CU 0x1856234, DIE 0x18ffbf8>)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/bits/invoke.h:95
+#38 0x00007f24c6aa912d in std::thread::_Invoker<std::tuple<void (mgsdk::flow::NaiveGraph::*)(mgsdk::flow::BaseNode*), mgsdk::flow::NaiveGraph*, mgsdk::flow::BaseNode*> >::_M_invoke<0ul, 1ul, 2ul> (this=0x7f225bd79c18)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/thread:234
+#39 0x00007f24c6aa90c7 in std::thread::_Invoker<std::tuple<void (mgsdk::flow::NaiveGraph::*)(mgsdk::flow::BaseNode*), mgsdk::flow::NaiveGraph*, mgsdk::flow::BaseNode*> >::operator() (this=0x7f225bd79c18)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/thread:243
+#40 0x00007f24c6aa90a6 in std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (mgsdk::flow::NaiveGraph::*)(mgsdk::flow::BaseNode*), mgsdk::flow::NaiveGraph*, mgsdk::flow::BaseNode*> > >::_M_run (this=0x7f225bd79c10)
+    at external/toolchain_v3_gcc7_archive/bin/../lib/gcc/x86_64-megvii-linux-gnu/7.5.0/../../../../x86_64-megvii-linux-gnu/include/c++/7.5.0/thread:186
+#41 0x00007f24c7388682 in execute_native_thread_routine () from /opt/megvii/lib/libmegvideo.so
+#42 0x00007f24c65e16ba in start_thread (arg=0x7f226f7fe700) at pthread_create.c:333
+#43 0x00007f24bd9814dd in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109

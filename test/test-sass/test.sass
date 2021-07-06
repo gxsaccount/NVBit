@@ -1,0 +1,45 @@
+
+Fatbin elf code:
+================
+arch = sm_20
+code version = [1,7]
+producer = <unknown>
+host = linux
+compile_size = 64bit
+
+	code for sm_20
+
+Fatbin elf code:
+================
+arch = sm_20
+code version = [1,7]
+producer = cuda
+host = linux
+compile_size = 64bit
+
+	code for sm_20
+		Function : _Z7set_onePi
+	.headerflags    @"EF_CUDA_SM20 EF_CUDA_PTX_SM(EF_CUDA_SM20)"
+        /*0000*/         MOV R1, c[0x1][0x100];               /* 0x2800440400005de4 */
+        /*0008*/         S2R R0, SR_CTAID.X;                  /* 0x2c00000094001c04 */
+        /*0010*/         S2R R2, SR_TID.X;                    /* 0x2c00000084009c04 */
+        /*0018*/         MOV32I R3, 0x4;                      /* 0x180000001000dde2 */
+        /*0020*/         MOV32I R4, 0x1;                      /* 0x1800000004011de2 */
+        /*0028*/         IMAD R0, R0, c[0x0][0x8], R2;        /* 0x2004400020001ca3 */
+        /*0030*/         IMAD R2.CC, R0, R3, c[0x0][0x20];    /* 0x2007800080009ca3 */
+        /*0038*/         IMAD.HI.X R3, R0, R3, c[0x0][0x24];  /* 0x208680009000dce3 */
+        /*0040*/         ST.E [R2], R4;                       /* 0x9400000000211c85 */
+        /*0048*/         EXIT;                                /* 0x8000000000001de7 */
+		.............................
+
+
+
+Fatbin ptx code:
+================
+arch = sm_20
+code version = [4,3]
+producer = cuda
+host = linux
+compile_size = 64bit
+compressed
+ptxasOptions = 
