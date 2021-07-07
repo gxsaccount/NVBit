@@ -42,14 +42,36 @@ extern "C" __device__ __noinline__ int32_t nvbit_read_reg(uint64_t reg_num) {
 #pragma unroll
     for (int i = 0; i < 1024; i++) __nvbit_var += i;
     assert(__nvbit_var == reg_num);
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
     return __nvbit_var;
 }
 
 extern "C" __device__ __noinline__ void nvbit_write_reg(uint64_t reg_num,
                                                         int32_t reg_val) {
-#pragma unroll
+#pragma unroll 1024
     for (int i = 0; i < 1024; i++) __nvbit_var += i;
     assert(__nvbit_var == reg_num + reg_val);
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
+#pragma unroll 1024
+    for (int i = 0; i < 1024; i++) __nvbit_var += reg_num*i;
 }
 
 extern "C" __device__ __noinline__ int32_t nvbit_read_ureg(uint64_t reg_num) {
